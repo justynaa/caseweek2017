@@ -96,8 +96,9 @@ function Schools() {
     var thiz = this;
     this.schools_types.forEach(function(name) {
       $('#school-type--' + name).click(function() {
+		  thiz.ul_schools_list_clear(); //added clear function
 		thiz.render_schools(thiz.get_schools(name));
-        return false;
+		  return false;
       });
     });
   }
